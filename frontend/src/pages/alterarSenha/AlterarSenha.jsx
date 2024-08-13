@@ -12,10 +12,21 @@ const AlterarSenha = () => {
     return (
         <div className="card">
             <Card title="Alterar Senha ">
-                <InputText />
-                <Password feedback={false} />
-                <Button label="Alterar Senha" />
-                <Button label="Cancelar" />
+                <div>
+                    <label for="Name">Email</label><br />
+                    <InputText />
+                </div>
+                <div>
+                    <label for="Name">Código</label><br />
+                    <InputText />
+                </div>
+                <div>
+                    <label for="Senha">Senha</label><br />
+                    <Password feedback={false} />
+                </div>
+                    <Button label="Alterar Senha" />
+                    <Button label="Cancelar" />
+
 
             </Card>
             <div class="grid">

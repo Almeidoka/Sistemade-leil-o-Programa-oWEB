@@ -12,8 +12,14 @@ const Cadastro = () => {
     return (
         <div className="card">
             <Card title="Cadastrar">
-                <InputText />
-                <Password feedback={false} />
+                <div>
+                    <label for="Name">Nome</label><br />
+                    <InputText />
+                </div>
+                <div>
+                    <label for="Senha">Senha</label><br />
+                    <Password feedback={false} />
+                </div>
                 <Button label="Confirmar" />
                 <Button label="Cancelar" />
 
