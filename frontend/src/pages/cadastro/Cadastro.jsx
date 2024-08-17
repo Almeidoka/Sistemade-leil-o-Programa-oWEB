@@ -24,7 +24,7 @@ const Cadastro = () => {
                 <Button label="Cancelar" />
 
             </Card>
-            <div class="grid">
+            {/* <div class="grid">
                 <div class="col-12 md:col-6 lg:col-3">
                     <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
                 </div>
@@ -37,7 +37,7 @@ const Cadastro = () => {
                 <div class="col-12 md:col-6 lg:col-3">
                     <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     );

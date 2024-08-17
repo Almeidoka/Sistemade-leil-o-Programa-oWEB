@@ -11,7 +11,7 @@ import { Button } from 'primereact/button';
 const Login = () =>{
     return(
          <div className="card">
-            <Card title="Login">
+            <Card title="login">
                 <div>
                     <label for="Name">Nome</label><br />
                     <InputText />
@@ -20,10 +20,10 @@ const Login = () =>{
                     <label for="Senha">Senha</label><br/>
                     <Password feedback={false} />
                 </div>
-                <Button label="Login"/>
+                <Button label="Botao-login"/>
 
             </Card>
-            <div class="grid">
+            {/* <div class="grid">
                 <div class="col-12 md:col-6 lg:col-3">
                     <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
                 </div>
@@ -36,7 +36,7 @@ const Login = () =>{
                 <div class="col-12 md:col-6 lg:col-3">
                     <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     );
