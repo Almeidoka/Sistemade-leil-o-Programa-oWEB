@@ -1,7 +1,8 @@
 import React from "react";
 import "./AlterarSenha.css";
 
-import { Card } from 'primereact/card';
+import React, { useState } from 'react';
+import { Messages } from 'primereact/messages';
 import { Password } from 'primereact/password';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
@@ -9,41 +10,41 @@ import { Button } from 'primereact/button';
 
 
 const AlterarSenha = () => {
+    const [senha, setSenha] = useState('');
+    const [confirmarSenha, setConfirm] = UseState('');
+    const[erro, setErro] = UseState([]);
+    const mensagem = React.useRef(null);
+
+    const alterarSenha = (s) =>{
+        const novaSenha = s.target.value;
+        setSenha(novaSenha);
+    }
+
+    const confirmarSenha = (s) =>{
+        setConfirmarSenha(s.target.value);
+    }
     return (
         <div className="card">
             <Card title="Alterar Senha ">
                 <div>
                     <label for="Name">Email</label><br />
-                    <InputText />
+                    <InputText id="email" type="email" placeholder="Email" required />
                 </div>
                 <div>
                     <label for="Name">Código</label><br />
-                    <InputText />
+                    <InputText id="code" type="text" placeholder="Código" required />
                 </div>
                 <div>
                     <label for="Senha">Senha</label><br />
-                    <Password feedback={false} />
+                    <Password id="new-password" value={senha} onChange={alterarSenha} toggleMask feedback={false} placeholder="Nova Senha" required />
                 </div>
-                    <Button label="Alterar Senha" />
-                    <Button label="Cancelar" />
+                <Button label="Alterar Senha" onChange= {confirmarSenha}/>
+                <Button label="Cancelar" />
 
 
             </Card>
-            {/* <div class="grid">
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-            </div> */}
         </div>
+
 
     );
 }

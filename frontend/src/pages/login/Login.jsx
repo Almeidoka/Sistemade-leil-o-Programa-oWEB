@@ -9,7 +9,7 @@ import { useState } from "react";
 
 
 export const Login = () =>{
-    const [usuario, setUsuario] = useState({email:"", password: ""});
+    const [usuario, setUsuario] = useState({email:"", senha: ""});
     const navigate = useNavigate();
 
     const handChange=(input) => {
@@ -17,7 +17,7 @@ export const Login = () =>{
     }
 
     const login = () =>{
-        if (usuario.email == "gustavo@gmail.com" && usuario.password == "123"){
+        if (usuario.email == "gustavo@gmail.com" && usuario.senha == "123"){
             let token = "token1"
             localStorage.setItem("token", token);
             localStorage.setItem("usuario", usuario);
