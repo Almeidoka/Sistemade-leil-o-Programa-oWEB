@@ -1,4 +1,3 @@
-import React from "react";
 import "./AlterarSenha.css";
 
 import React, { useState } from 'react';
@@ -6,13 +5,14 @@ import { Messages } from 'primereact/messages';
 import { Password } from 'primereact/password';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
+import { Card } from 'primereact/card';
 
 
 
 const AlterarSenha = () => {
     const [senha, setSenha] = useState('');
-    const [confirmarSenha, setConfirm] = UseState('');
-    const[erro, setErro] = UseState([]);
+    const [confirmSenha, setConfirm] = useState('');
+    const[erro, setErro] = useState([]);
     const mensagem = React.useRef(null);
 
     const alterarSenha = (s) =>{
@@ -21,7 +21,7 @@ const AlterarSenha = () => {
     }
 
     const confirmarSenha = (s) =>{
-        setConfirmarSenha(s.target.value);
+        setSenha(s.target.value);
     }
     return (
         <div className="card">
@@ -38,7 +38,7 @@ const AlterarSenha = () => {
                     <label for="Senha">Senha</label><br />
                     <Password id="new-password" value={senha} onChange={alterarSenha} toggleMask feedback={false} placeholder="Nova Senha" required />
                 </div>
-                <Button label="Alterar Senha" onChange= {confirmarSenha}/>
+                <Button label="Alterar Senha" onChange= {confirmSenha}/>
                 <Button label="Cancelar" />
 
 
