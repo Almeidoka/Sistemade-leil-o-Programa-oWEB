@@ -10,6 +10,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import DefaulLayout from './components/DefaulLayout';
 import SimpleLayout from './components/SimpleLayout';
+import Formulario from './Formulario/Formulario';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/Cadastro' element={<SimpleLayout><Cadastro/></SimpleLayout>} />
           <Route path='/RecuperarSenha' element={<SimpleLayout><RecuperarSenha /></SimpleLayout>} />
           <Route path='/AlterarSenha' element={<SimpleLayout><AlterarSenha /></SimpleLayout>} />
+          <Route path='formulario'element={<Formulario/>}/>
         </Routes>
       </BrowserRouter>
     {/*<Footer/>*/}
